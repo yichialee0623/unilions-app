@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Unplug - 演算法優化引導應用程式</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Noto+Sans+TC:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--secondary-color);
+        padding: 20px;
+      }
+
+      .index-container {
+        max-width: 800px;
+        width: 100%;
+        background-color: white;
+        border-radius: 16px; /* Updated from 12px */
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.07); /* Updated shadow */
+        padding: 40px; /* Increased padding */
+      }
+
+      .app-title {
+        text-align: center;
+        margin-bottom: 30px;
+        color: var(--primary-color);
+      }
+      .app-title h1 {
+        font-size: 2.8em; /* Increased font size */
+        margin-bottom: 10px;
+      }
+
+      .app-title p {
+        font-size: 1.1em; /* Increased font size */
+        color: #555;
+      }
+
+      .description {
+        text-align: center;
+        margin-bottom: 30px;
+      }
+      .description p {
+        font-size: 1.05em; /* Increased font size */
+        line-height: 1.7;
+      }
+
+      .page-list {
+        display: grid;
+        grid-template-columns: repeat(
+          auto-fill,
+          minmax(220px, 1fr)
+        ); /* Adjusted grid item size */
+        gap: 20px; /* Increased gap */
+        margin-bottom: 30px;
+      }
+
+      .page-item {
+        background-color: #f9f9f9;
+        border-radius: 12px; /* Increased border-radius */
+        padding: 20px; /* Increased padding */
+        text-align: center;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+      }
+
+      .page-item:hover {
+        transform: translateY(-4px); /* Enhanced hover effect */
+        box-shadow: 0 5px 12px rgba(0, 0, 0, 0.1); /* Enhanced hover shadow */
+      }
+
+      .page-item i {
+        font-size: 2.2em; /* Increased icon size */
+        margin-bottom: 12px; /* Adjusted margin */
+        color: var(--accent-color);
+      }
+
+      .page-item h3 {
+        margin: 0 0 8px 0; /* Adjusted margin */
+        font-size: 1.1em; /* Increased font size */
+        font-weight: 600;
+      }
+      .page-item p {
+        font-size: 0.9em;
+        color: #666;
+      }
+
+      .page-item a {
+        display: block;
+        text-decoration: none;
+        color: inherit;
+        padding: 5px;
+      }
+
+      .footer {
+        margin-top: 20px;
+        text-align: center;
+        font-size: 0.9em;
+        color: #888;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="index-container">
+      <div class="app-title">
+        <i
+          class="fas fa-plug"
+          style="
+            font-size: 3.5em;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+          "
+        ></i>
+        <h1>Unplug</h1>
+        <p>演算法優化 — 引導應用程式</p>
+      </div>
+
+      <div class="description">
+        <p>
+          「Unplug」旨在協助您重新掌握社群媒體的使用主導權。我們並非禁止使用，而是透過工具讓您的每一次開啟應用程式，都是一次有意識、有選擇、有反思的行為。
+        </p>
+        <p style="margin-top: 15px">
+          此原型展示了如何管理與過濾您現有的社群媒體內容，而非創建一個新的
+          Feed。請點擊下方連結瀏覽不同的功能頁面。建議從「歡迎頁面」開始體驗。
+        </p>
+      </div>
+
+      <div class="page-list">
+        <div class="page-item">
+          <a href="welcome.html">
+            <i class="fas fa-door-open"></i>
+            <h3>歡迎頁面</h3>
+            <p>初始設定與介紹</p>
+          </a>
+        </div>
+
+        <div class="page-item">
+          <a href="dashboard.html">
+            <i class="fas fa-home"></i>
+            <h3>儀表板</h3>
+            <p>您的 Unplug 控制中心</p>
+          </a>
+        </div>
+
+        <div class="page-item">
+          <a href="content_mode_selection.html">
+            <i class="fas fa-filter"></i>
+            <h3>內容過濾模式</h3>
+            <p>管理您的社群內容</p>
+          </a>
+        </div>
+
+        <div class="page-item">
+          <a href="reports.html">
+            <i class="fas fa-chart-pie"></i>
+            <h3>使用報告</h3>
+            <p>洞察您的使用習慣</p>
+          </a>
+        </div>
+
+        <div class="page-item">
+          <a href="sim_social_feed.html">
+            <i class="fas fa-mobile-alt"></i>
+            <h3>模擬社群 Feed</h3>
+            <p>（用於展示過濾效果）</p>
+          </a>
+        </div>
+
+        <div class="page-item">
+          <a href="content_notice.html">
+            <i class="fas fa-bell"></i>
+            <h3>模擬通知</h3>
+            <p>（不確定能不能滿足系統通知規範，但他很好看）</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
